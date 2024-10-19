@@ -1,0 +1,148 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente más moderna */
+    background-image: url('backgrounds/fondo1.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Contenedores principales */
+.login-container, .register-container, .dashboard-main, .create-character-container, .characters-list-container, .character-details-container, .leaderboard-container, .dashboard-container {
+    background: linear-gradient(135deg, #3A1C71, #D76D77, #FFAF7B); /* Degradado moderno multicolor */
+    padding: 25px;
+    border-radius: 16px; /* Bordes redondeados suaves */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    width: 350px;
+    max-width: 100%; /* Asegura que el diseño sea responsivo */
+    text-align: center;
+    margin: 10px;
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px; /* Tamaño de fuente más grande */
+    margin-bottom: 15px;
+}
+
+/* Formularios y entradas */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #eeeeee;
+}
+
+input {
+    padding: 12px;
+    margin-top: 6px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    color: #333;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #ff7e5f; /* Borde color anaranjado suave */
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
+}
+
+/* Botones */
+button {
+    padding: 14px;
+    background-color: #ff7e5f; /* Naranja vibrante */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #d65d3b;
+    transform: translateY(-2px);
+}
+
+.error {
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Avatares */
+.avatar-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Listas y detalles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: none;
+}
+
+th {
+    background-color: #ff7e5f; /* Color anaranjado para los encabezados */
+    color: white;
+    font-size: 16px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
+}
+
+/* Botones en las tablas */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+button {
+    background-color: #12c2e9; /* Azul vibrante */
+}
+
+button:hover {
+    background-color: #0e9bb8; /* Azul más oscuro */
+}
