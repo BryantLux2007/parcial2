@@ -1,148 +1,220 @@
-/* Estilos generales */
-body {
-    font-family: 'Poppins', sans-serif; /* Fuente más moderna */
-    background-image: url('backgrounds/fondo1.jpg'); /* Ruta de la imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #fff;
-}
 
-/* Contenedores principales */
-.login-container, .register-container, .dashboard-main, .create-character-container, .characters-list-container, .character-details-container, .leaderboard-container, .dashboard-container {
-    background: linear-gradient(135deg, #3A1C71, #D76D77, #FFAF7B); /* Degradado moderno multicolor */
-    padding: 25px;
-    border-radius: 16px; /* Bordes redondeados suaves */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    width: 350px;
-    max-width: 100%; /* Asegura que el diseño sea responsivo */
-    text-align: center;
-    margin: 10px;
-}
+    /* Estilos generales */
+    body {
+        font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente más amigable */
+        background-image: url('backgrounds/goku\ ui2.jpg'); /* Fondo de imagen kawaii */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: #d800d8; /* Color morado pastel */
+    }
 
-/* Títulos */
-h2 {
-    text-align: center;
-    color: #ffffff;
-    font-size: 24px; /* Tamaño de fuente más grande */
-    margin-bottom: 15px;
-}
+    /* Contenedores principales */
+    .login-container, .register-container, .dashboard-main, .create-character-container, .characters-list-container, .character-details-container, .leaderboard-container, .dashboard-container {
+        background: linear-gradient(135deg, #e0e0e0, #ffffff); /* Degradado suave con blanco */
+        padding: 25px;
+        border-radius: 30px; /* Bordes redondeados para un look kawaii */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+        width: 350px;
+        max-width: 100%; /* Asegura que el diseño sea responsivo */
+        text-align: center;
+        margin: 10px;
+        border: 3px solid #00bfff; /* Bordes en color azul brillante */
+        position: relative; /* Para efectos de animación */
+        overflow: hidden; /* Para que los efectos no salgan del contenedor */
+    }
 
-/* Formularios y entradas */
-form {
-    display: flex;
-    flex-direction: column;
-}
+    /* Efecto de chispa (simulando energía) */
+    .dashboard-container::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 191, 255, 0) 70%);
+        animation: pulse 3s infinite; /* Animación de pulso */
+        opacity: 0.5;
+    }
 
-label {
-    margin-top: 12px;
-    font-size: 14px;
-    color: #eeeeee;
-}
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
 
-input {
-    padding: 12px;
-    margin-top: 6px;
-    border: none;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    color: #333;
-    font-size: 14px;
-}
+    /* Títulos */
+    h2 {
+        text-align: center;
+        color: #00bfff; /* Color azul brillante */
+        font-size: 26px; /* Tamaño de fuente grande */
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 0 #00bfff; /* Sombra de texto brillante */
+    }
 
-input:focus {
-    outline: none;
-    border: 2px solid #ff7e5f; /* Borde color anaranjado suave */
-    box-shadow: 0 0 10px rgba(255, 126, 95, 0.3);
-}
+    /* Formularios y entradas */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 
-/* Botones */
-button {
-    padding: 14px;
-    background-color: #ff7e5f; /* Naranja vibrante */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
+    label {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #00bfff; /* Color azul brillante */
+    }
 
-button:hover {
-    background-color: #d65d3b;
-    transform: translateY(-2px);
-}
+    input {
+        padding: 12px;
+        margin-top: 8px;
+        border: 2px solid #00bfff;
+        background-color: #ffffff; /* Fondo blanco para entradas */
+        border-radius: 16px;
+        color: #000; /* Texto negro */
+        font-size: 14px;
+        transition: transform 0.2s ease;
+    }
 
-.error {
-    color: #ff4d4d;
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: center;
-}
+    input:focus {
+        outline: none;
+        border: 2px solid #00bfff; /* Borde azul brillante */
+        box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+        transform: scale(1.05); /* Efecto de zoom */
+    }
 
-/* Avatares */
-.avatar-preview {
-    margin-top: 15px;
-    text-align: center;
-}
+    /* Botones */
+    button {
+        padding: 14px;
+        background-color: #00bfff; /* Azul brillante */
+        color: white;
+        border: none;
+        border-radius: 20px; /* Bordes más redondeados */
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
 
-/* Listas y detalles */
-ul {
-    list-style: none;
-    padding: 0;
-}
+    button:hover {
+        background-color: #0098db; /* Azul más oscuro al pasar el mouse */
+        transform: translateY(-4px) scale(1.05); /* Efecto de rebote */
+    }
 
-li {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    /* Mensaje de error */
+    .error {
+        color: #ff4d6d;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+    }
 
-/* Tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 14px;
-}
+    /* Avatares */
+    .avatar-preview {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: #00bfff; /* Color azul brillante */
+    }
 
-th, td {
-    padding: 12px;
-    text-align: center;
-    border: none;
-}
+    /* Listas y detalles */
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 
-th {
-    background-color: #ff7e5f; /* Color anaranjado para los encabezados */
-    color: white;
-    font-size: 16px;
-}
+    li {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        color: #00bfff; /* Color azul brillante */
+    }
 
-tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
-}
+    /* Tablas */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 14px;
+    }
 
-/* Botones en las tablas */
-.buttons-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+    th, td {
+        padding: 12px;
+        text-align: center;
+        border: none;
+    }
 
-button {
-    background-color: #12c2e9; /* Azul vibrante */
-}
+    th {
+        background-color: #00bfff; /* Encabezados en azul brillante */
+        color: white;
+        font-size: 16px;
+    }
 
-button:hover {
-    background-color: #0e9bb8; /* Azul más oscuro */
-}
+    tbody tr:nth-child(even) {
+        background-color: rgba(255, 204, 204, 0.2); /* Fondo suave para filas pares */
+    }
+
+    /* Botones en las tablas */
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        background-color: #00bfff; /* Botones en azul brillante */
+    }
+
+    button:hover {
+        background-color: #0098db; /* Color azul oscuro al pasar el mouse */
+    }
+
+    .achievements-container {
+        background: #ffffff; /* Fondo blanco para logros */
+        border-radius: 16px;
+        padding: 25px;
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .achievements-container h2 {
+        color: #00bfff; /* Azul brillante */
+        text-align: center;
+    }
+
+    .achievements-container ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .achievements-container li {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .achievements-container h3 {
+        color: #00bfff; /* Azul brillante para títulos de logros */
+        margin: 0;
+    }
+
+    .achievements-container span {
+        display: block;
+        font-size: 14px;
+        color: #555;
+    }
+
