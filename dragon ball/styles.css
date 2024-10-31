@@ -2,7 +2,7 @@
     /* Estilos generales */
     body {
         font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente más amigable */
-        background-image: url('backgrounds/goku\ ui2.jpg'); /* Fondo de imagen kawaii */
+        background-image: url('backgrounds/goku'); /* Fondo de imagen kawaii */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
